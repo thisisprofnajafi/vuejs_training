@@ -21,6 +21,12 @@
         <p> My age is {{age}}</p>
         <div id="canvas" v-on:mousemove="updateXY">{{x}},{{y}}</div>
         <a v-on:click.prevent.once="click" href="http://shopinella.ir/">shopinella</a>
+        <h1>Keyboard Event</h1>
+        <Label>Name:</Label>
+        <input type="text" v-on:keyup="logName" />
+        <Label>Age:</Label>
+        <input type="text" v-on:keyup.alt.enter="logAge" />
+         
 
     </div>
 

@@ -20,6 +20,12 @@ new Vue({
         click:function(){
             alert("Are you ready to buy some shit?");
         }
+        ,logAge:function(){
+            console.log("you insert your age");
+        },
+        logAge:function(){
+            console.log("you insert your name");
+        }
     }
 
 });
