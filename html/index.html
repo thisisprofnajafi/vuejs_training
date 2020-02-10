@@ -13,15 +13,18 @@
 
     <div id="vue-app">
 
-        <h1>Conditional</h1>
-
-        <button v-on:click="error = !error" >Toggle Error</button>
-        <button v-on:click="success = !success" >Toggle Success</button>
-        <!-- <p v-if="error">There Has been an error</p>
-        <p v-else-if="success">Wooow , success :)</p> -->
-        <p v-show="error">Error</p>
-        <p v-show="success">Success :)</p>
-        
+        <h1>Loop And For</h1>
+        <ul>
+            <li v-for="char in chars">{{char}}</li>
+        </ul>
+        <ul>
+            <li v-for="(ninja,index) in ninjas">{{index+1}} . {{ninja.name}} - {{ninja.age}}</li>
+        </ul>
+        <template v-for="(ninja,index) in ninjas">
+            <template v-for="(val,key) in ninja">
+                <p><strong>{{key}}</strong> - <small>{{val}}</small></p>
+            </template>
+        </template>
 
     </div>
 
