@@ -1,3 +1,21 @@
+
+Vue.component('greeting',{
+
+    template: '<p>Hey petter, I am a {{name}} <button v-on:click="changeName">How are you?</button></p>',
+    data :function(){
+        return {
+            name:'yousha'
+        }
+    },
+    methods:{
+        changeName: function(){
+            this.name = 'Maria'
+        }
+    }
+
+});
+
+
 var one = new Vue({
 
     el: '#vue-app-one',
@@ -31,5 +49,4 @@ var two = new Vue({
         }
     }
 
-});
-
+})
