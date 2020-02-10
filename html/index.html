@@ -13,20 +13,15 @@
 
     <div id="vue-app">
 
-        <h1>Event and modifires</h1>
-        <button v-on:click.once="add(1)">Add a Year</button>
-        <button v-on:click="subtract(1)">Subtract a Year</button>
-        <button v-on:dblclick="add(10)">Add 10 Years</button>
-        <button v-on:dblclick="subtract(10)">Subtract 10 Years</button>
-        <p> My age is {{age}}</p>
-        <div id="canvas" v-on:mousemove="updateXY">{{x}},{{y}}</div>
-        <a v-on:click.prevent.once="click" href="http://shopinella.ir/">shopinella</a>
-        <h1>Keyboard Event</h1>
-        <Label>Name:</Label>
-        <input type="text" v-on:keyup="logName" />
-        <Label>Age:</Label>
-        <input type="text" v-on:keyup.alt.enter="logAge" />
-         
+        <h1>Conditional</h1>
+
+        <button v-on:click="error = !error" >Toggle Error</button>
+        <button v-on:click="success = !success" >Toggle Success</button>
+        <!-- <p v-if="error">There Has been an error</p>
+        <p v-else-if="success">Wooow , success :)</p> -->
+        <p v-show="error">Error</p>
+        <p v-show="success">Success :)</p>
+        
 
     </div>
 
